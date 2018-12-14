@@ -1,0 +1,36 @@
+{
+        "itemName" : "Leash",
+        "price" : 8.99,
+        "imgName" : "shop1.jpg",
+        "description" : "This leash is extremely durable and a necessity when it comes to being a dog owner."
+   }
+   {
+        "itemName" : "Studded Collar",
+        "price" : 10.99,
+        "imgName" : "shop6.jpg",
+        "description" : "Make other dog owners envious with this adorable studded collar."
+   }
+   {
+        "itemName" : "Dog Bowl",
+        "price" : 6.99,
+        "imgName" : "shop4.jpg",
+        "description" : "Be the most stylish dog owner on the block with this dog-boned bowl."
+   }
+   {   
+        "itemName" : "Rope Toy",
+        "price" : 3.99,
+        "imgName" : "shop3.jpg",
+        "description" : "The perfect toy to keep your pup entertained for hours."
+   }
+      {   
+        "itemName" : "Dog Bone",
+        "price" : 2.99,
+        "imgName" : "shop2.jpg",
+        "description" : "Every dog's favorite snack."
+   }
+      {   
+        "itemName" : "Dog Crate",
+        "price" : 30.00,
+        "imgName" : "shop5.jpg",
+        "description" : "This spacious crate will keep your pup comfortable and safe."
+   }

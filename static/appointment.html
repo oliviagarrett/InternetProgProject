@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<title>Appointment</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+</script>
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="./index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="./login.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LOGIN</a>
+    <a href="./shop.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SHOP</a>
+    <a href="./appointment.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">APPOINTMENTS</a>
+        <a href="./adminIndex.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ADMIN</a>
+  </div>
+</div>
+
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <div class="w3-display-container w3-center">
+    <img src="./images/banner.png" style="width:100%">
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript"
+    src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" >
+</script>
+<script type="text/javascript" src="./angJS/appt.js"></script>
+<h2>Book a Boarding Reservation</h2>
+<form action="/appt" method="POST">
+  <div class="container" ng-app="apptApp" ng-controller="apptCtrl">
+        <div class="form-group">
+        <label for="first_name">First Name:</label>
+        <input type="text" class="form-control" id="first" name="first_name" placeholder="Enter first name" style="width: 340px">
+    </div>
+    <div>
+        <label for="last_name">Last Name:</label>
+        <input type="text" class="form-control" id="last" name="last_name" placeholder="Enter last name" style="width: 340px">
+      </div>
+     <div>
+        <label for="appt_email">Email:</label>
+        <input type="text" class="form-control" id="email" name="appt_email" placeholder="Enter email" style="width: 340px">
+      </div>
+     <div>
+        <label for="phone_num">Phone Number:</label>
+        <input type="text" class="form-control" id="phone" name="phone_num" placeholder="Enter phone number" style="width: 340px">
+      </div>
+    <div style="display:block;">
+    <label for="drop_off">Drop Off Date:</label>
+    <select name="Month">
+    <option value="January">January</option>
+    <option value="February">February</option>
+    <option value="March">March</option>
+    <option value="April">April</option>
+    <option value="May">May</option>
+    <option value="June">June</option>
+    <option value="July">July</option>
+    <option value="August">August</option>
+    <option value="September">September</option>
+    <option value="October">October</option>
+    <option value="November">November</option>
+    <option value="December">December</option>
+</select>
+<select name="Day">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>
+  <option value="25">25</option>
+  <option value="26">26</option>
+  <option value="27">27</option>
+  <option value="28">28</option>
+  <option value="29">29</option>
+  <option value="30">30</option>
+  <option value="31">31</option>
+</select>
+</div>
+<div style="display:block;">
+    <label for="pick_up">Pick Up Date:</label>
+    <select name="Month">
+    <option value="January">January</option>
+    <option value="February">February</option>
+    <option value="March">March</option>
+    <option value="April">April</option>
+    <option value="May">May</option>
+    <option value="June">June</option>
+    <option value="July">July</option>
+    <option value="August">August</option>
+    <option value="September">September</option>
+    <option value="October">October</option>
+    <option value="November">November</option>
+    <option value="December">December</option>
+</select>
+<select name="Day">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>
+  <option value="25">25</option>
+  <option value="26">26</option>
+  <option value="27">27</option>
+  <option value="28">28</option>
+  <option value="29">29</option>
+  <option value="30">30</option>
+  <option value="31">31</option>
+</select>
+</div>
+    <div name="user_message">Special Instructions:</label>
+        <textarea class="form-control" id="msg" name="user_message" style="width: 340px"></textarea>
+    </div>
+    <div class="button">
+  <button type="submit" ng-click="makeAppt()">Submit</button>
+</form>
+</div>
+</div>
+
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT INFO</h2>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> 4225 Union Hill Road, Alpharetta, GA 30004<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: (770) 248-0321<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: info@pamperedpetcare.com<br>
+      </div>
+      <div class="w3-col m6">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="list-inline-item" href="gallery.html" target="_blank"><big>Gallery</big></i>
+    <i class="list-inline-item" target="_blank"><big> | </big></i>
+  <i class="list-inline-item" href="https://www.facebook.com/pamperedpetcare/" target="_blank"><big>Facebook</big></i>
+    <i class="list-inline-item" target="_blank"><big> | </big></i>
+  <i class="list-inline-item" href="https://www.yelp.com/biz/pampered-pet-care-alpharetta" target="_blank" ><big>Reviews</big></i>
+</footer>
+
+<script>
+
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+</script>
+<style>
+
+h1 {
+    font-family: Impact;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid #ffffff;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    font-size: 3em;
+    padding-bottom: 18px;
+}
+h2 {
+    text-align: center;
+}
+p {
+  text-align:center;
+}
+form {
+  background-color:white;
+  margin: 0 auto;
+  width: 400px;
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+#right {
+  float:left;
+  width:340px;
+}
+#left {
+  float:left;
+  width:620px;
+}
+form div + div {
+  margin-top: 1em;
+}
+select {
+    position: relative;
+    display: inline-block;
+    width: 10%;
+    padding: 6px 5px;
+    border: none;
+    border-radius: 2px;
+    background-color: #f1f1f1;
+}
+label {
+  width: 100px;
+}
+input {
+  display:block;
+  font: 1em sans-serif;
+  width: 1%;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+textarea {
+  font: 1em sans-serif;
+  width: 10%;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+input:focus, textarea:focus {
+  border-color: #000;
+}
+textarea {
+  vertical-align: top;
+  height: 15em;
+  width: 10px;
+}
+.button {
+    margin: auto;
+    width: 78%;
+  padding: 16px 1px;
+}
+button {
+  margin-left: 1em;
+}
+</style>
+</body>
+</html>
